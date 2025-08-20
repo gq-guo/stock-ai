@@ -1,0 +1,14 @@
+{
+  "name": "stock-ai-api",
+  "version": "1.0.0",
+  "description": "Vercel serverless functions for stock AI platform",
+  "dependencies": {
+    "@vercel/node": "^3.0.13",
+    "axios": "^1.6.7",
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "typescript": "^5.2.2"
+  }
+}
