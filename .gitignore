@@ -17,6 +17,11 @@ frontend/build/
 frontend/.next/
 frontend/out/
 
+# Vite cache and build files
+frontend/node_modules/.vite/
+backend/node_modules/.vite/
+.vite/
+
 # Backend build outputs
 backend/dist/
 backend/build/
