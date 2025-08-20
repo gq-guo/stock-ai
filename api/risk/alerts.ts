@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { RiskService } from '../../backend/src/services/risk';
+import { RiskService } from '../services/riskService';
 
 const riskService = new RiskService();
 

@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { StrategyService } from '../../backend/src/services/strategy';
+import { StrategyService } from '../services/strategyService';
 
 const strategyService = new StrategyService();
 

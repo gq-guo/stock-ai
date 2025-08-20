@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { NewsService } from '../../backend/src/services/news';
+import { NewsService } from '../services/newsService';
 
 const newsService = new NewsService();
 

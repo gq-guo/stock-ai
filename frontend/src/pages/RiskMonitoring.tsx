@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, List, Tag, Button, Alert, Row, Col, Statistic, Badge, Switch, Progress } from 'antd';
+import { Card, Tag, Button, Alert, Row, Col, Statistic, Badge, Switch, Progress } from 'antd';
 import { 
   WarningOutlined, 
   EyeOutlined, 
@@ -9,13 +9,8 @@ import {
 } from '@ant-design/icons';
 import { RiskAlert } from '../types';
 
-const RiskMonitoring: React.FC = () => {
-  const [alerts, setAlerts] = useState<RiskAlert[]>([]);
-  const [monitoringEnabled, setMonitoringEnabled] = useState(true);
-  const [loading, setLoading] = useState(false);
-
-  // 模拟风险监控数据
-  const mockAlerts: RiskAlert[] = [
+// 模拟风险监控数据
+const mockAlerts: RiskAlert[] = [
     {
       stockCode: '600795',
       stockName: '国电电力',
@@ -58,11 +53,13 @@ const RiskMonitoring: React.FC = () => {
     }
   ];
 
+const RiskMonitoring: React.FC = () => {
+  const [alerts, setAlerts] = useState<RiskAlert[]>([]);
+  const [monitoringEnabled, setMonitoringEnabled] = useState(true);
+
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setAlerts(mockAlerts);
-      setLoading(false);
     }, 1000);
   }, []);
 

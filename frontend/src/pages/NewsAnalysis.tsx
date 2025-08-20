@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, List, Tag, Button, Badge, Divider, Row, Col, Spin, Alert, Progress } from 'antd';
+import { Card, Button, Badge, Divider, Row, Col, Spin, Alert, Progress } from 'antd';
 import { 
   FireOutlined, 
   RiseOutlined, 

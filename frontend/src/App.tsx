@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout, Menu, ConfigProvider, theme } from 'antd';
 import {
   StockOutlined,
@@ -19,12 +18,8 @@ import SectorAnalysis from './pages/SectorAnalysis';
 const { Header, Sider, Content } = Layout;
 
 const App: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed] = useState(false);
   const [selectedKey, setSelectedKey] = useState('smart-selection');
-  
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
 
   const menuItems = [
     {

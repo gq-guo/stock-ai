@@ -123,6 +123,10 @@ temp/
 .vercel/
 .netlify/
 
+# Vercel deployment
+.vercel
+*.vercel
+
 # Database
 *.db
 *.sqlite

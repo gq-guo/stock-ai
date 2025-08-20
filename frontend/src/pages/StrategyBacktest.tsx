@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Form, Select, InputNumber, Button, Divider, Statistic, Row, Col, Alert, Table, Tag, Progress } from 'antd';
+import { Card, Form, Select, InputNumber, Button, Statistic, Row, Col, Alert, Table, Tag, Progress } from 'antd';
 import { PlayCircleOutlined, BarChartOutlined } from '@ant-design/icons';
 import { BacktestResult } from '../types';
 
@@ -111,7 +111,7 @@ const StrategyBacktest: React.FC = () => {
     <div>
       <Row gutter={[24, 24]}>
         <Col xs={24} lg={10}>
-          <Card title="策略配置" icon={<BarChartOutlined />}>
+          <Card title="策略配置">
             <Form
               form={form}
               layout="vertical"

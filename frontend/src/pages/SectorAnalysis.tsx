@@ -191,7 +191,7 @@ const SectorAnalysis: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: SectorData) => (
+      render: () => (
         <div>
           <Button type="link" size="small" icon={<LineChartOutlined />}>
             查看详情
@@ -287,8 +287,6 @@ const SectorAnalysis: React.FC = () => {
             dataSource={sectors}
             pagination={false}
             size="middle"
-            defaultSortOrder="descend"
-            defaultSortField="changePercent"
           />
         </Spin>
       </Card>

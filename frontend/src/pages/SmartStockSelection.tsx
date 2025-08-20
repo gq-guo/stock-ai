@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Tabs, Card, List, Tag, Button, Input, Space, Spin, Badge, Progress, Row, Col } from 'antd';
-import { StarOutlined, RiseOutlined, SearchOutlined } from '@ant-design/icons';
+import { Tabs, Card, Tag, Button, Input, Spin, Badge, Progress, Row, Col } from 'antd';
+import { StarOutlined } from '@ant-design/icons';
 import { StockAnalysis } from '../types';
 
 const { TabPane } = Tabs;
@@ -157,20 +157,7 @@ const SmartStockSelection: React.FC = () => {
     }, 1000);
   }, []);
 
-  const getProbabilityColor = (probability: number) => {
-    if (probability >= 80) return '#52c41a';
-    if (probability >= 60) return '#faad14';
-    return '#ff4d4f';
-  };
 
-  const getRiskColor = (risk: string) => {
-    switch (risk) {
-      case 'low': return 'green';
-      case 'medium': return 'orange';
-      case 'high': return 'red';
-      default: return 'default';
-    }
-  };
 
   const handleSearch = async (value: string) => {
     if (!value.trim()) return;
@@ -409,7 +396,7 @@ const SmartStockSelection: React.FC = () => {
             <Row gutter={[16, 16]}>
               {recommendedStocks
                 .sort((a, b) => b.probability - a.probability)
-                .map((stock, index) => (
+                .map((stock) => (
                   <Col key={stock.stockCode} xs={24} sm={12} lg={8} xl={6}>
                     {renderStockCard(stock)}
                   </Col>
@@ -460,7 +447,7 @@ const SmartStockSelection: React.FC = () => {
               <div>
                 <h4>检索结果 ({searchResults.length} 只股票)</h4>
                 <Row gutter={[16, 16]}>
-                  {searchResults.map((stock, index) => (
+                  {searchResults.map((stock) => (
                     <Col key={stock.stockCode} xs={24} sm={12} lg={8} xl={6}>
                       {renderStockCard(stock)}
                     </Col>

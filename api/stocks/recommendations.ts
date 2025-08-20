@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { StockService } from '../../backend/src/services/stock';
+import { StockService } from '../services/stockService';
 
 const stockService = new StockService();
 
